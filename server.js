@@ -2,9 +2,10 @@ const express = require('express');
 const { chatAIResponses } = require('./getAIChatResponses.js')
 
 const app = express();
+const PORT = 3000;
 
 app.get('/', (req, res)=> chatAIResponses(req, res))
 
-app.listen(3000, () => {
-    console.log('Listening on Port 3000...')
+app.listen(PORT, () => {
+    console.log(`Listening on Port ${PORT}...`)
 })

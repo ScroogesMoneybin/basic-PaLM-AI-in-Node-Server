@@ -66,8 +66,11 @@ const chatAIResponses = (req, res) => {
                     "content": obj.content                        
                 });
             }
-            
+            // res.json(obj.content)
+            // res.send(obj.content)
+            res.writeHead(200, { 'Content-Type': 'text/html'})
             res.write(obj.content)
+            
         });
         
         res.end();
